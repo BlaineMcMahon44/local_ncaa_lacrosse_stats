@@ -1,0 +1,21 @@
+.teams-table-wrapper {
+    max-height: 800px;
+    /* Adjust as needed */
+    overflow-y: auto;
+    
+}
+
+td {
+    text-align: center !important;
+}
+
+th{
+    text-align: center !important;
+}
+
+.scrollable-body {
+    display: block;
+    max-height: 800px;
+    /* Adjust as needed */
+    overflow-y: auto;
+}

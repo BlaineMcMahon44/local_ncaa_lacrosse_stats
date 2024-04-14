@@ -1,0 +1,64 @@
+.my-games-container {
+    padding-left: 2% !important;
+    padding-right: 2%;
+    padding-top: 2%;
+    font: 'Monaco';
+}
+
+/* Custom class for header background color */
+.custom-header {
+    background-color: #f0f0f0 !important;
+    /* Example color */
+}
+
+table {
+    border-collapse: collapse !important;
+    margin: 25px 0 !important;
+    font-size: 0.9em !important;
+    font-family: sans-serif !important;
+    min-width: 400px !important;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15) !important;
+    border-radius: 20px !important;
+    border-radius: 15px !important;
+    overflow: hidden !important;
+    /* Ensures rounded corners are visible */
+
+}
+
+th {
+    padding: 12px 15px !important;
+    background-color: #2F4F4F !important;
+    position: sticky !important;
+    /* Make the header sticky */
+
+}
+
+td {
+    padding: 12px 15px !important;
+}
+
+
+tbody tr:last-of-type {
+    border-bottom: 2px solid #009879 !important;
+}
+
+tbody tr.active-row {
+    font-weight: bold !important;
+    color: #009879 !important;
+}
+
+.opponent-info {
+    display: flex;
+    /* Use flexbox layout */
+    flex-direction: column;
+    /* Stack items vertically */
+    align-items: center;
+    /* Align items horizontally */
+}
+
+.opponent-info span {
+    white-space: nowrap;
+    /* Prevent text from wrapping onto a new line */
+    margin-bottom: 3px;
+    /* Add margin between the text and image */
+}
