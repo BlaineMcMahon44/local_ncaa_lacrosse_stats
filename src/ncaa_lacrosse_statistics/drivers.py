@@ -3,7 +3,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options as ChromeOptions
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
-from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.chrome.service import Service as ChromeService
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import Select
 from selenium.common.exceptions import NoSuchElementException, WebDriverException, TimeoutException
@@ -45,8 +45,8 @@ class ChromeDriver(object):
             #'Mozilla/5.0 (iPad; CPU OS 8_1 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12B410 Safari/600.1.4',
             #'Mozilla/5.0 (iPad; CPU OS 7_0_4 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko) Version/7.0 Mobile/11B554a Safari/9537.53'
             ]
-
-        self.driver = webdriver.Chrome(service=webdriver.chrome.service.Service(executable_path=self.exec_path), options=self.chrome_options)
+        service = ChromeService(executable_path=self.exec_path)
+        self.driver = webdriver.Chrome(service=service, options=self.chrome_options)
         self.driver.implicitly_wait(10)
         self.user_agent = random.choice(self.user_agent_lists)
         self.chrome_options.add_argument(f'user-agent={self.user_agent}')
